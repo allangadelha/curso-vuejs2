@@ -3,7 +3,7 @@
 <div id="app">
   <p>{{ contador }}</p>
   <button v-on:click="somar(5, $event)">Somar 5</button>
-  <!-- chama função atrvés do v-on:click-->
+  <!-- chama função através do v-on:click-->
   <p v-on:mousemove="atualizarXY">
     Mouse: {{ x }} e {{ y }}
     <span v-on:mousemove="parar">PARAR AQUI!!!</span>
