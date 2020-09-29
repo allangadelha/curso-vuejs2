@@ -10,7 +10,44 @@ html {
 }
 
 .panel {
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
   margin: 10px;
   padding: 20px;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* Área dos pontos */
+
+.scores {
+  display: flex;
+}
+
+.score {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.score h1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.life-bar {
+  border: 1px solid #AAA;
+  height: 20px;
+  width: 80%;
+}
+
+.life-bar .life {
+  background-color: green;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.life-bar .life.danger {
+  background-color: red;
 }
