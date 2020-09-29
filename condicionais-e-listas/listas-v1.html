@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script src="http://unpkg.com/vue"></script>
+
+<div id="app">
+  <ul>
+    <li v-for="cor in cores" :style="{backgroundColor: cor.colorido}">{{ cor.nome }}</li>
+  </ul>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      cores: [
+        { nome: 'vermelho', colorido: 'red' },
+        { nome: 'verde', colorido: 'green' },
+        { nome: 'amarelo', colorido: 'yellow' },
+        { nome: 'azul', colorido: 'blue' }
+      ],
+      pessoas: [
+        { nome: 'Allan', idade: 39, peso: '85' },
+        { nome: 'Lucca', idade: 10, peso: '45' },
+        { nome: 'Hero', idade: 69, peso: '48' }
+      ]
+    },
+
+  })
+</script>
