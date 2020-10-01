@@ -30,6 +30,7 @@
       <div v-else class="lose">Você perdeu... :(</div>
     </div>
     <div class="panel buttons">
+<<<<<<< HEAD
       <template v-if="running">
         <button class="btn attack">Ataque</button>
         <button class="btn especial-attack">Ataque especial</button>
@@ -37,6 +38,15 @@
         <button @click="running = false" class="btn give-up">Desistir</button>
       </template>
       <button v-else @click="startGame" class="btn new-game">Iniciar jogo</button>
+=======
+      <template v-if="runnig">
+        <button class="btn attack">Ataque</button>
+        <button class="btn especial-attack">Ataque especial</button>
+        <button class="btn heal">Curar</button>
+        <button class="btn give-up">Desistir</button>
+      </template>
+      <button v-else class="btn new-game">Iniciar jogo</button>
+>>>>>>> 7b80873a1fef4edbf2327aaccb536960185b2ad4
     </div>
     <div class="panel logs"></div>
   </div>
