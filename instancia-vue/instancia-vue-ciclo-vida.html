@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <h1>{{ titulo }} </h1>
+  <button @click="titulo += '#'">Alterar título</button>
+  <button @click="$destroy()">Destruir</button>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      titulo: 'Ciclo de vida'
+    },
+
+    // Métodos chamados apenas uma vez, na criação da instância (início)
+    beforeCreate() {
+      console.log('Antes de criar')
+    },
+
+    created() {
+      console.log('Criado')
+    },
+
+    beforeMount() {
+      console.log('Antes de montar (DOM)')
+    },
+
+    mounted() {
+      console.log('DOM montada')
+    },
+    // Métodos chamados apenas uma vez, na criação da instância (fim)
+
+    // Métodos chamados sempre que ocorrerem modificações na DOM
+    beforeUpdate() {
+      console.log('Antes de atualizar')
+    },
+
+    updated() {
+      console.log('Atualizado')
+    },
+
+    beforeDestroy() {
+      console.log('Antes de destriur')
+    },
+
+    destroyed() {
+      console.log('Destruído')
+    },
+  })
+</script>
