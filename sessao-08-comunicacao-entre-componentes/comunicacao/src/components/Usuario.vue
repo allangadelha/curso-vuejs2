@@ -23,7 +23,7 @@ export default {
         }
     },
     methods: {
-        alterarnome () {
+        alterarNome () {
             this.nome = "Ana"
         }
     }
