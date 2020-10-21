@@ -9,7 +9,7 @@
             <app-usuario-info 
                 :nome="nome" 
                 @nomeMudou="nome = $event.novo"
-                :reiiciarFn="reiniciarNome"    
+                :reiniciarFn="reiniciarNome"    
             />
             <app-usuario-editar />
         </div>

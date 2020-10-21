@@ -3,8 +3,8 @@
         <h2>As Informações de Usuário</h2>
         <p>Vários detalhes...</p>
         <p>Nome do usuário: <strong>{{ inverterNome() }}</strong></p>
-        <button @click="reiniciarNome">Reiniciar nome</button>
-        <button @click="reiiciarFn()">Reiniciar Nome (callback)</button>
+        <button @click="reiniciarNome">Reiniciar Nome</button>
+        <button @click="reiniciarFn()">Reiniciar Nome (Callback)</button>
     </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
             // }
             default: "Anônimo"
         },
-        reiiciarFn: Function
+        reiniciarFn: Function
     },
     methods: {
         inverterNome() {
