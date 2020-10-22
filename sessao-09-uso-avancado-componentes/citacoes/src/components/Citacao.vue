@@ -2,6 +2,7 @@
     <div class="citacao">
         <!-- Aqui funciona -->
         <!-- {{ texto }} -->
+        <slot></slot>
     </div>
 </template>
 
