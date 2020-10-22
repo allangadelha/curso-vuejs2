@@ -1,12 +1,14 @@
 <template>
     <div class="citacao">
-        
+        <!-- Aqui funciona -->
+        <!-- {{ texto }} -->
     </div>
 </template>
 
 <script>
 export default {
-
+    // Aqui funciona
+    // props: ['texto']
 }
 </script>
 
