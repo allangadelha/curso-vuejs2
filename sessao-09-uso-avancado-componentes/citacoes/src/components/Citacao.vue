@@ -20,4 +20,9 @@ export default {
         padding: 25px;
         max-width: 450px;
     }
+
+    /* Aqui funciona */
+    /* h1 {
+        color: red;
+    } */
 </style>

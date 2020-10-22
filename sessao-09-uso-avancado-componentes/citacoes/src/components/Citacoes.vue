@@ -51,4 +51,9 @@ export default {
         flex-direction: column;
         align-items: center;
     }
+
+    /* Aqui funciona */
+    /* h1 {
+        color: green;
+    } */
 </style>
