@@ -3,7 +3,7 @@
         <!-- Aqui funciona -->
         <!-- {{ texto }} -->
         <slot name="fonte"></slot>
-        <slot name="texto"></slot>
+        <slot></slot>
         <slot name="autor"></slot>
     </div>
 </template>
