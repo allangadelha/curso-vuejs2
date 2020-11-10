@@ -2,13 +2,17 @@
   "name": "formulario-desafio",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://api.teste.com.br/v1",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "vue": "^2.5.17",
+    "vue-axios": "^3.1.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.0",
