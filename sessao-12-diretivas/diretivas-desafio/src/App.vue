@@ -4,11 +4,44 @@
 		<hr>
 		<!-- Exercício -->
 		<!-- Escreva uma diretiva que funcione com o v-on (escute eventos) -->
+		<!-- <button v-quando="acao">Executar</button> -->
+		<button v-quando:click="acao">Executar</button>
+		
+		<p v-quando:mouseenter="mouseEnter" v-quando:mouseleave="mouseLeave">Teste mouse event!</p>
 	</div>
 </template>
 
 <script>
 export default {
+	directives: {
+		quando: {
+			// bind(el, binding) {
+			// 	el.onclick = function(e) {
+			// 		 binding.value()
+			// 	}
+			// },
+
+			bind(el, binding) {
+				const tipo = binding.arg
+				const fn = binding.value
+				el.addEventListener(tipo, fn)
+			}
+
+		}
+	},
+	methods: {
+		acao() {
+			alert('Ação executada!')
+		},
+
+		mouseEnter() {
+			console.log('Mouse enter!')
+		},
+
+		mouseLeave() {
+			console.log('Mouse lave!')
+		}
+	}
 	
 }
 </script>
