@@ -2,7 +2,8 @@
 	<div id="app">
 		<h1>Filtros & Mixins</h1>
 		<hr>
-		<p>{{ cpf | cpf | inverter }}</p>
+		<p>{{ cpfDoAluno | cpf | inverter }}</p>
+		<input type="text" :value="cpfDoAluno | cpf | inverter">
 	</div>
 </template>
 
@@ -19,7 +20,7 @@ export default {
 	},
 	data() {
 		return {
-			cpf: '81185545387'
+			cpfDoAluno: '81185545387'
 		}
 	}
 }
@@ -33,6 +34,10 @@ export default {
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
+	font-size: 2.5rem;
+}
+
+input {
 	font-size: 2.5rem;
 }
 </style>
