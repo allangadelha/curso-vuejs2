@@ -8,19 +8,9 @@
 </template>
 
 <script>
+import FrutasMixin from './FrutasMixin'
 export default {
-	data() {
-		return {
-			frutas: ['banana', 'maçã', 'laranja']
-		}
-    },
-    
-    methods: {
-        add() {
-            this.frutas.push(this.fruta)
-            this.fruta = ''
-        }
-    }
+	mixins: [FrutasMixin],
 }
 </script>
 
