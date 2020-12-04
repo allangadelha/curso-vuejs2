@@ -8,10 +8,12 @@
 			class="mb-4">
 			Mostra mensagem
 		</b-button>
-		<transition name="fade">
+
+		<!-- <transition name="fade">
 			<b-alert variante="info" show v-if="exibir">{{ msg }}</b-alert>
-		</transition>
-		<transition name="slide">
+		</transition> -->
+
+		<transition name="slide" type="animation">
 			<b-alert variante="info" show v-if="exibir">{{ msg }}</b-alert>
 		</transition>
 	</div>
@@ -60,9 +62,15 @@ export default {
 
 .slide-enter-active {
 	animation: slide-in 2s ease;
+	transition: opacity 2s;
 }
 
 .slide-leave-active {
 	animation: slide-out 2s ease;
+	transition: opacity 6s;
+}
+
+.slide-enter, .slide-leave-to {
+	opacity: 0;
 }
 </style>
