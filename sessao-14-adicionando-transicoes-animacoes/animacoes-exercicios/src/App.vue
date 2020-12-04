@@ -8,7 +8,7 @@
 			class="mb-4">
 			Mostra mensagem
 		</b-button>
-		<transition>
+		<transition name="fade">
 			<b-alert variante="info" show v-if="exibir">{{ msg }}</b-alert>
 		</transition>
 	</div>
@@ -35,5 +35,29 @@ export default {
 	color: #2c3e50;
 	margin-top: 60px;
 	font-size: 1.5rem;
+}
+
+.fade-enter{
+
+}
+
+.fade-enter-active {
+
+}
+
+.fade-enter-to {
+
+}
+
+.fade-leave {
+
+}
+
+.fade-leave-active {
+
+}
+
+.fade-leave-to {
+	
 }
 </style>
