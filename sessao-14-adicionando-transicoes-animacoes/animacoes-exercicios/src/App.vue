@@ -9,27 +9,29 @@
 			Mostra mensagem
 		</b-button>
 
-		<transition name="fade" appear>
-			<b-alert variante="info" show v-if="exibir">{{ msg }}</b-alert>
+		<!-- <transition name="fade" appear>
+			<b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>
 		</transition>
 
 		<transition name="slide" type="animation" appear>
-			<b-alert variante="info" show v-show="exibir">{{ msg }}</b-alert>
+			<b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>
 		</transition>
 
 		<transition
 		enter-active-class="animated bounce"
 		leave-active-class="animated shake">
-			<b-alert variante="info" show v-show="exibir">{{ msg }}</b-alert>
-		</transition>
+			<b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>
+		</transition> -->
 
 		<hr>
-		<b-select v-model="tipoanimacao" class="mb-4">
+		<b-select v-model="tipoAnimacao" class="mb-4">
 			<option value="fade">Fade</option>
 			<option value="slide">Slide</option>
 		</b-select>
-		<transition :name="tipoanimacao">
-			<b-alert variante="info" show v-show="exibir">{{ msg }}</b-alert>
+
+		<transition :name="tipoAnimacao" mode="out-in">
+			<b-alert variant="info" show v-if="exibir" :key="info">{{ msg }}</b-alert>
+			<b-alert variant="warning" show v-else :key="warn">{{ msg }}</b-alert>
 		</transition>
 	</div>
 </template>
@@ -41,7 +43,7 @@ export default {
 		return {
 			msg: 'Uma mensagem de informação para o usuário!',
 			exibir: false,
-			tipoanimacao: 'fade'
+			tipoAnimacao: 'fade'
 		}
 	}
 }
